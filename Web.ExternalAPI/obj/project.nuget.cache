@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "nkCdDWbPC3Nb8AOfHVvjut6WdOlKnFhwed5i/fytCWK+CMuRRjW8K9TmTVb71YqZk+dwilNkgYxFjfCz9zmHnQ==",
+  "success": true,
+  "projectFilePath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

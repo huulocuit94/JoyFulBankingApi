@@ -1,0 +1,12 @@
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.deps.json
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.dll
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\bin\Debug\net5.0\ref\Web.ExternalAPI.dll
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.pdb
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.csproj.AssemblyReference.cache
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.AssemblyInfoInputs.cache
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.AssemblyInfo.cs
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.csproj.CoreCompileInputs.cache
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.dll
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\ref\Web.ExternalAPI.dll
+D:\Personal\WebAPI\Net 5.0\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.pdb

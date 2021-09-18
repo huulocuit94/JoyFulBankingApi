@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Mappers\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Responses\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Application.Shared\Web.Application.Shared.csproj" />
+    <ProjectReference Include="..\Web.Core\Web.Core.csproj" />
+    <ProjectReference Include="..\Web.Data\Web.Data.csproj" />
+    <ProjectReference Include="..\Web.ExternalAPI\Web.ExternalAPI.csproj" />
+  </ItemGroup>
+
+</Project>

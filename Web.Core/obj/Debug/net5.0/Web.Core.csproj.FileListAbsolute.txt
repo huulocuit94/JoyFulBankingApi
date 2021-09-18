@@ -1,0 +1,12 @@
+D:\Personal\WebAPI\Net 5.0\Web.Core\bin\Debug\net5.0\Web.Core.deps.json
+D:\Personal\WebAPI\Net 5.0\Web.Core\bin\Debug\net5.0\Web.Core.dll
+D:\Personal\WebAPI\Net 5.0\Web.Core\bin\Debug\net5.0\ref\Web.Core.dll
+D:\Personal\WebAPI\Net 5.0\Web.Core\bin\Debug\net5.0\Web.Core.pdb
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.csproj.AssemblyReference.cache
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.AssemblyInfoInputs.cache
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.AssemblyInfo.cs
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.csproj.CoreCompileInputs.cache
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.dll
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\ref\Web.Core.dll
+D:\Personal\WebAPI\Net 5.0\Web.Core\obj\Debug\net5.0\Web.Core.pdb
