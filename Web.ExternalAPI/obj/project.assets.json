@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+      "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
       "projectName": "Web.ExternalAPI",
-      "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+      "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
       "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\obj\\",
+      "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",

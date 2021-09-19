@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application\\Web.Application.csproj": {}
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application\\Web.Application.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj",
         "projectName": "Web.Application.Shared",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application\\Web.Application.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application\\Web.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application\\Web.Application.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application\\Web.Application.csproj",
         "projectName": "Web.Application",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application\\Web.Application.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application\\Web.Application.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,17 +82,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj": {
-                "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj"
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj"
               },
-              "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj": {
-                "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj"
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj"
               },
-              "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\Web.Data.csproj": {
-                "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\Web.Data.csproj"
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\Web.Data.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\Web.Data.csproj"
               },
-              "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {
-                "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj"
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj"
               }
             }
           }
@@ -139,14 +139,14 @@
         }
       }
     },
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj",
         "projectName": "Web.Core",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -175,6 +175,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
@@ -207,14 +211,14 @@
         }
       }
     },
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\Web.Data.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\Web.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\Web.Data.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\Web.Data.csproj",
         "projectName": "Web.Data",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\Web.Data.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\Web.Data.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Data\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -230,7 +234,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj"
+              },
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -275,14 +286,14 @@
         }
       }
     },
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
         "projectName": "Web.ExternalAPI",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.ExternalAPI\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",

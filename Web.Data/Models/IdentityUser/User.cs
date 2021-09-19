@@ -4,14 +4,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Web.Application.Shared.Enums;
 
 namespace Web.Data.Models.IdentityUser
 {
-    public class User: IdentityUser<Guid>
+    public class User : IdentityUser<Guid>
     {
+        public User()
+        {
+            Claims = new HashSet<UserClaim>();
+            Tokens = new HashSet<UserToken>();
+            Roles = new HashSet<UserRole>();
+            GroupMappings = new HashSet<GroupUserMapping>();
+            CompaignUserMappings = new HashSet<CompaignUserMapping>();
+            DealUserMappings = new HashSet<DealUserMapping>();
+        }
+
         public string FullName { get; set; }
-        public ICollection<UserClaim> Claims { get; set; }
-        public ICollection<UserToken> Tokens { get; set; }
-        public ICollection<UserRole> Roles { get; set; }
+        public long Joys { get; set; } = 0;
+        public virtual ICollection<UserClaim> Claims { get; set; }
+        public virtual ICollection<UserToken> Tokens { get; set; }
+        public virtual ICollection<UserRole> Roles { get; set; }
+        public virtual ICollection<GroupUserMapping> GroupMappings { get; set; }
+        public virtual ICollection<CompaignUserMapping> CompaignUserMappings { get; set; }
+        public virtual ICollection<DealUserMapping> DealUserMappings { get; set; }
     }
 }

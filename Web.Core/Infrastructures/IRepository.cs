@@ -38,7 +38,7 @@
 
         Task<bool> AnyAsync(Expression<Func<TEntity, bool>> selector = null);
 
-        Task AddAsync(TEntity entities);
+        Task AddAsync(TEntity entity);
 
         Task AddRangeAsync(IList<TEntity> entities);
 

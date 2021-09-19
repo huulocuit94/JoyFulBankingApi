@@ -18,7 +18,9 @@ namespace Web.Application.Shared
         public const string RoleGroupAdmin = "GroupAdmin";
         #endregion
         #region ErrorCode
-        public const int UserWrongPassword = 403;
+        public const int UserWrongPassword = 4001;
+        public const int UserExist = 4002;
+        public const int UserError = 4003;
         #endregion
     }
 }

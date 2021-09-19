@@ -14,4 +14,9 @@
     <Folder Include="Migrations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Web.Application.Shared\Web.Application.Shared.csproj" />
+    <ProjectReference Include="..\Web.Core\Web.Core.csproj" />
+  </ItemGroup>
+
 </Project>

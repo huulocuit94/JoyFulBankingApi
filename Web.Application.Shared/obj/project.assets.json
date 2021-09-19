@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj",
+      "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj",
       "projectName": "Web.Application.Shared",
-      "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\Web.Application.Shared.csproj",
+      "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\Web.Application.Shared.csproj",
       "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-      "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Application.Shared\\obj\\",
+      "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Application.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",

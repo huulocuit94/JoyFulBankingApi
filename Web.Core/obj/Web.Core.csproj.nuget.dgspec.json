@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj": {}
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj",
         "projectName": "Web.Core",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\Web.Core.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Web.Core\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"

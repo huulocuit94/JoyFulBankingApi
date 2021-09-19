@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Tools\\Tools.csproj": {}
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Tools\\Tools.csproj": {}
   },
   "projects": {
-    "D:\\Personal\\WebAPI\\Net 5.0\\Tools\\Tools.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Tools\\Tools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Personal\\WebAPI\\Net 5.0\\Tools\\Tools.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Tools\\Tools.csproj",
         "projectName": "Tools",
-        "projectPath": "D:\\Personal\\WebAPI\\Net 5.0\\Tools\\Tools.csproj",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Tools\\Tools.csproj",
         "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
-        "outputPath": "D:\\Personal\\WebAPI\\Net 5.0\\Tools\\obj\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Tools\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",

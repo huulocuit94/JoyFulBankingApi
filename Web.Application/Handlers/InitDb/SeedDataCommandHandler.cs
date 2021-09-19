@@ -16,14 +16,14 @@ namespace Web.Application.Handlers.InitDb
 {
     public class SeedDataCommandHandler : IRequestHandler<SeedDataCommand, bool>
     {
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly UserManager<User> _userManager;
-        private readonly RoleManager<Role> _roleManager;
+        private readonly IUnitOfWork unitOfWork;
+        private readonly UserManager<User> userManager;
+        private readonly RoleManager<Role> roleManager;
         public SeedDataCommandHandler(IUnitOfWork unitOfWork, UserManager<User> userManager, RoleManager<Role> roleManager)
         {
-            _unitOfWork = unitOfWork;
-            _userManager = userManager;
-            _roleManager = roleManager;
+            this.unitOfWork = unitOfWork;
+            this.userManager = userManager;
+            this.roleManager = roleManager;
         }
         public async Task<bool> Handle(SeedDataCommand request, CancellationToken cancellationToken)
         {
@@ -33,7 +33,7 @@ namespace Web.Application.Handlers.InitDb
         }
         private async Task SeedRoles()
         {
-            if (!await _roleManager.Roles.AnyAsync())
+            if (!await roleManager.Roles.AnyAsync())
             {
                 //creating roles
                 var roles = new List<Role>
@@ -45,9 +45,9 @@ namespace Web.Application.Handlers.InitDb
 
                 foreach (var t in roles)
                 {
-                    if (!await _roleManager.RoleExistsAsync(t.Name))
+                    if (!await roleManager.RoleExistsAsync(t.Name))
                     {
-                        await _roleManager.CreateAsync(t);
+                        await roleManager.CreateAsync(t);
                     }
                 }
             }
@@ -78,7 +78,7 @@ namespace Web.Application.Handlers.InitDb
             foreach (var item in dicUsers)
             {
                 var dicUser = item.Key;
-                var user = await _userManager.FindByNameAsync(dicUser.UserName);
+                var user = await userManager.FindByNameAsync(dicUser.UserName);
                 if (user != null)
                     return;
 
@@ -87,11 +87,11 @@ namespace Web.Application.Handlers.InitDb
                 {
                     password = Constants.AdminPassword;
                 }
-                var createUser = await _userManager.CreateAsync(dicUser, password);
+                var createUser = await userManager.CreateAsync(dicUser, password);
                 if (createUser.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(dicUser, item.Value);
-                    await _userManager.AddClaimAsync(dicUser, new Claim(ClaimTypes.Role, item.Value));
+                    await userManager.AddToRoleAsync(dicUser, item.Value);
+                    await userManager.AddClaimAsync(dicUser, new Claim(ClaimTypes.Role, item.Value));
                 }
             }
 

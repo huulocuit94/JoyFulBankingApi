@@ -19,7 +19,6 @@ namespace Web.Core.Infrastructures
         private bool disposed = false;
         private IDbContextTransaction _dbContextTransaction;
         private Dictionary<Type, object> repositories;
-
         /// <summary>
         /// Initializes a new instance of the <see cref="UnitOfWork{TContext}"/> class.
         /// </summary>

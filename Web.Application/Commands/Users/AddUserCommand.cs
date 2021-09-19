@@ -9,7 +9,7 @@ using Web.Core.Infrastructures;
 
 namespace Web.Application.Commands.Users
 {
-    public class AddUserCommand: IRequest<ResponseDto<Entity>>
+    public class AddUserCommand : IRequest<ResponseDto<Entity>>
     {
         public string FullName { get; set; }
         public string Password { get; set; }
@@ -17,5 +17,6 @@ namespace Web.Application.Commands.Users
         public string Email { get; set; }
         public string RoleName { get; set; }
         public bool SendSetPasswordEmail { get; set; }
+        public Guid GroupId { get; set; }
     }
 }

@@ -147,7 +147,15 @@ namespace Web.Core.Infrastructures
             }
         }
 
-        public async Task AddAsync(TEntity entities) => await _dbSet.AddAsync(entities);
+        public async Task AddAsync(TEntity entity)
+        {
+            if (typeof(IAuditedEntity).IsAssignableFrom(typeof(TEntity)))
+            {
+                ((IAuditedEntity)entity).CreatedDate = DateTimeOffset.UtcNow;
+                ((IAuditedEntity)entity).ModifiedDate = DateTimeOffset.UtcNow;
+            }
+            await _dbSet.AddAsync(entity);
+        }
 
         public async Task AddRangeAsync(IList<TEntity> entities) => await _dbSet.AddRangeAsync(entities);
 

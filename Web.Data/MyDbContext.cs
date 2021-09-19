@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Web.Data.Models;
 using Web.Data.Models.IdentityUser;
 
 namespace Web.Data
@@ -15,6 +16,17 @@ namespace Web.Data
         {
 
         }
+        public DbSet<Compaign> Compaigns { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<Deal> Deals { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<CompaignGroupMapping> CompaignGroupMappings { get; set; }
+        public DbSet<CompaignUserMapping> CompaignUserMappings { get; set; }
+        public DbSet<DealUserMapping> DealUserMappings { get; set; }
+        public DbSet<GroupUserMapping> GroupUserMappings { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<TransferJoy> TransferJoys { get; set; }
+        public DbSet<TransferScore> TransferScores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {  
@@ -44,6 +56,19 @@ namespace Web.Data
                 .WithOne(e => e.User)
                 .HasForeignKey(e => e.UserId)
                 .IsRequired();
+                user.HasMany(x => x.CompaignUserMappings)
+                .WithOne(x => x.User)
+                .HasForeignKey(x => x.UserId)
+                .IsRequired();
+                user.HasMany(x => x.DealUserMappings)
+                .WithOne(x => x.User)
+                .HasForeignKey(x => x.UserId)
+                .IsRequired();
+                user.HasMany(x => x.GroupMappings)
+               .WithOne(x => x.User)
+               .HasForeignKey(x => x.UserId)
+               .IsRequired();
+
             });
             modelBuilder.Entity<Role>(b =>
             {
