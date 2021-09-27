@@ -1,0 +1,14 @@
+Web.API/bin/*
+Web.API/obj/*
+Web.Application.Shared/bin/*
+Web.Data/bin/Debug/*
+Web.ExternalAPI/bin/*
+Web.ExternalAPI/obj/*
+Web.Application/obj/*
+Web.Core/bin/*
+.vs/*
+Tools/obj/*
+Web.Application.Shared/obj/*
+Web.Data/obj/*
+Web.Core/obj/*
+Web.Application/bin/*

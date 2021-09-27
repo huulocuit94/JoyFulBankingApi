@@ -10,3 +10,20 @@ D:\Personal\WebAPI\Net 5.0\Web.Data\obj\Debug\net5.0\Web.Data.csproj.CoreCompile
 D:\Personal\WebAPI\Net 5.0\Web.Data\obj\Debug\net5.0\Web.Data.dll
 D:\Personal\WebAPI\Net 5.0\Web.Data\obj\Debug\net5.0\ref\Web.Data.dll
 D:\Personal\WebAPI\Net 5.0\Web.Data\obj\Debug\net5.0\Web.Data.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Data.deps.json
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Data.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\ref\Web.Data.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Data.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Application.Shared.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Core.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Application.Shared.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\bin\Debug\net5.0\Web.Core.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.csproj.AssemblyReference.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.AssemblyInfoInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.AssemblyInfo.cs
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.csproj.CoreCompileInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.csproj.CopyComplete
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\ref\Web.Data.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Data\obj\Debug\net5.0\Web.Data.pdb
