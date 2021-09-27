@@ -21,7 +21,11 @@ namespace Web.Data.Models.IdentityUser
         }
 
         public string FullName { get; set; }
-        public long Joys { get; set; } = 0;
+        public long TotalJoys { get; set; } = 0;
+        public long CurrentJoys { get; set; }
+        public string CMND { get; set; }
+        public Rank Rank { get; set; }
+        public string Avatar { get; set; } 
         public virtual ICollection<UserClaim> Claims { get; set; }
         public virtual ICollection<UserToken> Tokens { get; set; }
         public virtual ICollection<UserRole> Roles { get; set; }

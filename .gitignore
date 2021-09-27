@@ -12,3 +12,6 @@ Web.Application.Shared/obj/*
 Web.Data/obj/*
 Web.Core/obj/*
 Web.Application/bin/*
+Tools/bin/Debug/net5.0/Tools.dll
+Tools/bin/Debug/net5.0/Tools.pdb
+Tools/bin/Debug/net5.0/ref/Tools.dll

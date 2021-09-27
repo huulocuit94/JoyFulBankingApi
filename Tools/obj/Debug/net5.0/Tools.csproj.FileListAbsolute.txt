@@ -1,12 +1,24 @@
-D:\Personal\WebAPI\Net 5.0\Tools\bin\Debug\net5.0\Tools.deps.json
-D:\Personal\WebAPI\Net 5.0\Tools\bin\Debug\net5.0\Tools.dll
-D:\Personal\WebAPI\Net 5.0\Tools\bin\Debug\net5.0\ref\Tools.dll
-D:\Personal\WebAPI\Net 5.0\Tools\bin\Debug\net5.0\Tools.pdb
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.csproj.AssemblyReference.cache
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.AssemblyInfoInputs.cache
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.AssemblyInfo.cs
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.csproj.CoreCompileInputs.cache
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.dll
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\ref\Tools.dll
-D:\Personal\WebAPI\Net 5.0\Tools\obj\Debug\net5.0\Tools.pdb
+D:/Personal/WebAPI/Net 5.0/Tools/bin/Debug/net5.0/Tools.deps.json
+D:/Personal/WebAPI/Net 5.0/Tools/bin/Debug/net5.0/Tools.dll
+D:/Personal/WebAPI/Net 5.0/Tools/bin/Debug/net5.0/ref/Tools.dll
+D:/Personal/WebAPI/Net 5.0/Tools/bin/Debug/net5.0/Tools.pdb
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.csproj.AssemblyReference.cache
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.GeneratedMSBuildEditorConfig.editorconfig
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.AssemblyInfoInputs.cache
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.AssemblyInfo.cs
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.csproj.CoreCompileInputs.cache
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.dll
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/ref/Tools.dll
+D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.pdb
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/bin/Debug/net5.0/Tools.deps.json
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/bin/Debug/net5.0/Tools.dll
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/bin/Debug/net5.0/ref/Tools.dll
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/bin/Debug/net5.0/Tools.pdb
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.csproj.AssemblyReference.cache
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.GeneratedMSBuildEditorConfig.editorconfig
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.AssemblyInfoInputs.cache
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.AssemblyInfo.cs
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.csproj.CoreCompileInputs.cache
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.dll
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/ref/Tools.dll
+/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.pdb

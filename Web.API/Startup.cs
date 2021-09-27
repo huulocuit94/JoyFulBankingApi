@@ -8,10 +8,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Web.Application.Commands.InitDb;
@@ -140,6 +142,16 @@ namespace Web.API
                 endpoints.MapControllers();
             });
             InitDatabase(app).GetAwaiter().GetResult();
+            if(Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments")))
+            {
+                Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments"));
+            }
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments")),
+                RequestPath = new PathString("/Attachments")
+            });
+
         }
         private async Task InitDatabase(IApplicationBuilder app)
         {
