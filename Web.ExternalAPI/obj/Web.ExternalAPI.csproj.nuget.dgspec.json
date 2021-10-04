@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/Web.ExternalAPI.csproj": {}
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {}
   },
   "projects": {
-    "/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/Web.ExternalAPI.csproj": {
+    "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/Web.ExternalAPI.csproj",
+        "projectUniqueName": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
         "projectName": "Web.ExternalAPI",
-        "projectPath": "/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/Web.ExternalAPI.csproj",
-        "packagesPath": "/Users/developer/.nuget/packages/",
-        "outputPath": "/Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/obj/",
+        "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\Web.ExternalAPI.csproj",
+        "packagesPath": "C:\\Users\\Nguyen Ho Sen\\.nuget\\packages\\",
+        "outputPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.ExternalAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/developer/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Nguyen Ho Sen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +40,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -58,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

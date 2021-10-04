@@ -52,6 +52,5 @@
 
         void RemoveRange(IList<TEntity> entities);
 
-        void ChangeEntityState(TEntity entity, EntityState state);
     }
 }

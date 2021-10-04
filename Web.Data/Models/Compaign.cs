@@ -20,6 +20,7 @@ namespace Web.Data.Models
         public DateTimeOffset ExpiredDate { get; set; }
         public CompaignStatus Status { get; set; }
         public string Description { get; set; }
+        public string FileData { get; set; }
        
         public virtual ICollection<CompaignUserMapping> CompaignUserMappings { get; set; }
     }

@@ -22,3 +22,15 @@ D:/Personal/WebAPI/Net 5.0/Tools/obj/Debug/net5.0/Tools.pdb
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.dll
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/ref/Tools.dll
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Tools/obj/Debug/net5.0/Tools.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\bin\Debug\net5.0\Tools.deps.json
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\bin\Debug\net5.0\Tools.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\bin\Debug\net5.0\ref\Tools.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\bin\Debug\net5.0\Tools.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.AssemblyInfoInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.AssemblyInfo.cs
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.csproj.CoreCompileInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\ref\Tools.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Tools\obj\Debug\net5.0\Tools.csproj.AssemblyReference.cache

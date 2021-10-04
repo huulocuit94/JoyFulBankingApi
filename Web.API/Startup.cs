@@ -142,7 +142,7 @@ namespace Web.API
                 endpoints.MapControllers();
             });
             InitDatabase(app).GetAwaiter().GetResult();
-            if(Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments")))
+            if(!Directory.Exists(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments")))
             {
                 Directory.CreateDirectory(Path.Combine(Directory.GetCurrentDirectory(), @"Attachments"));
             }

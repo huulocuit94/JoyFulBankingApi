@@ -10,18 +10,6 @@ D:/Personal/WebAPI/Net 5.0/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.cspr
 D:/Personal/WebAPI/Net 5.0/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.dll
 D:/Personal/WebAPI/Net 5.0/Web.ExternalAPI/obj/Debug/net5.0/ref/Web.ExternalAPI.dll
 D:/Personal/WebAPI/Net 5.0/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.pdb
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/Web.ExternalAPI.deps.json
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/Web.ExternalAPI.dll
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/ref/Web.ExternalAPI.dll
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/Web.ExternalAPI.pdb
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.csproj.AssemblyReference.cache
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.GeneratedMSBuildEditorConfig.editorconfig
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.AssemblyInfoInputs.cache
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.AssemblyInfo.cs
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.csproj.CoreCompileInputs.cache
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.dll
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/ref/Web.ExternalAPI.dll
-D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.pdb
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/Web.ExternalAPI.deps.json
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/Web.ExternalAPI.dll
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/bin/Debug/net5.0/ref/Web.ExternalAPI.dll
@@ -34,3 +22,18 @@ D:/Personal/JoyfullBanking/Source/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.dll
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/ref/Web.ExternalAPI.dll
 /Users/developer/Documents/JoyfulBanking/JoyFulBankingApi/Web.ExternalAPI/obj/Debug/net5.0/Web.ExternalAPI.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.csproj.AssemblyReference.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.AssemblyInfoInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.AssemblyInfo.cs
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.csproj.CoreCompileInputs.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.deps.json
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\ref\Web.ExternalAPI.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\ref\Web.ExternalAPI.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.runtimeconfig.json
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\bin\Debug\net5.0\Web.ExternalAPI.runtimeconfig.dev.json
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.ExternalAPI\obj\Debug\net5.0\Web.ExternalAPI.genruntimeconfig.cache
