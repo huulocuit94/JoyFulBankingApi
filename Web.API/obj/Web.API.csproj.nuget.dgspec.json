@@ -73,6 +73,14 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -123,7 +131,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj": {
+                "projectPath": "D:\\Personal\\JoyfullBanking\\Source\\JoyFulBankingApi\\Web.Core\\Web.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -203,6 +215,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -214,6 +230,10 @@
             "Microsoft.Extensions.Configuration.Binder": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
             }
           },
           "imports": [
@@ -282,6 +302,10 @@
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
               "version": "[5.0.0, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.12, )"
             },
             "Z.EntityFramework.Plus.EFCore": {
               "target": "Package",

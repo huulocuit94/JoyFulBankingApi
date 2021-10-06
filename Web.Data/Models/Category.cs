@@ -7,8 +7,16 @@ using Web.Data.BaseModels;
 
 namespace Web.Data.Models
 {
-    public class Category: BaseEntity
+    public class Category : BaseEntity
     {
-        public string Name { get; set; } 
+        public Category()
+        {
+            Tags = new HashSet<Tag>();
+        }
+        public string Name { get; set; }
+        public string Icon { get; set; }
+        public string Description { get; set; }
+
+        public virtual ICollection<Tag> Tags { get; set; }
     }
 }

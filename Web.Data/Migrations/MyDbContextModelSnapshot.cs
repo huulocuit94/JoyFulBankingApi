@@ -25,18 +25,19 @@ namespace Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid?>("TagId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TagId");
 
                     b.ToTable("Categories");
                 });
@@ -175,6 +176,12 @@ namespace Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CompaignId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("CreatedByUserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -182,6 +189,9 @@ namespace Web.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FileData")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -196,6 +206,9 @@ namespace Web.Data.Migrations
                     b.Property<DateTimeOffset>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<string>("Rules")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SourceLink")
                         .HasColumnType("nvarchar(max)");
 
@@ -206,6 +219,10 @@ namespace Web.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("CompaignId");
 
                     b.HasIndex("CreatedByUserId");
 
@@ -581,14 +598,14 @@ namespace Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("CreatedByUserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTimeOffset>("CreatedDate")
                         .HasColumnType("datetimeoffset");
-
-                    b.Property<Guid?>("DealId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -607,9 +624,9 @@ namespace Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserId");
+                    b.HasIndex("CategoryId");
 
-                    b.HasIndex("DealId");
+                    b.HasIndex("CreatedByUserId");
 
                     b.HasIndex("ModifiedByUserId");
 
@@ -690,13 +707,6 @@ namespace Web.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("TransferScores");
-                });
-
-            modelBuilder.Entity("Web.Data.Models.Category", b =>
-                {
-                    b.HasOne("Web.Data.Models.Tag", null)
-                        .WithMany("Categories")
-                        .HasForeignKey("TagId");
                 });
 
             modelBuilder.Entity("Web.Data.Models.Compaign", b =>
@@ -790,6 +800,18 @@ namespace Web.Data.Migrations
 
             modelBuilder.Entity("Web.Data.Models.Deal", b =>
                 {
+                    b.HasOne("Web.Data.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.Compaign", "Compaign")
+                        .WithMany("Deals")
+                        .HasForeignKey("CompaignId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Web.Data.Models.IdentityUser.User", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedByUserId")
@@ -801,6 +823,10 @@ namespace Web.Data.Migrations
                         .HasForeignKey("ModifiedByUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Compaign");
 
                     b.Navigation("CreatedByUser");
 
@@ -965,15 +991,15 @@ namespace Web.Data.Migrations
 
             modelBuilder.Entity("Web.Data.Models.Tag", b =>
                 {
+                    b.HasOne("Web.Data.Models.Category", null)
+                        .WithMany("Tags")
+                        .HasForeignKey("CategoryId");
+
                     b.HasOne("Web.Data.Models.IdentityUser.User", "CreatedByUser")
                         .WithMany()
                         .HasForeignKey("CreatedByUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("Web.Data.Models.Deal", null)
-                        .WithMany("Tags")
-                        .HasForeignKey("DealId");
 
                     b.HasOne("Web.Data.Models.IdentityUser.User", "ModifiedByUser")
                         .WithMany()
@@ -1040,14 +1066,16 @@ namespace Web.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Web.Data.Models.Category", b =>
+                {
+                    b.Navigation("Tags");
+                });
+
             modelBuilder.Entity("Web.Data.Models.Compaign", b =>
                 {
                     b.Navigation("CompaignUserMappings");
-                });
 
-            modelBuilder.Entity("Web.Data.Models.Deal", b =>
-                {
-                    b.Navigation("Tags");
+                    b.Navigation("Deals");
                 });
 
             modelBuilder.Entity("Web.Data.Models.Group", b =>
@@ -1077,11 +1105,6 @@ namespace Web.Data.Migrations
                     b.Navigation("Roles");
 
                     b.Navigation("Tokens");
-                });
-
-            modelBuilder.Entity("Web.Data.Models.Tag", b =>
-                {
-                    b.Navigation("Categories");
                 });
 #pragma warning restore 612, 618
         }

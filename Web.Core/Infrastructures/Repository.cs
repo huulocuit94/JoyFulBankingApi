@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic.Core;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Z.EntityFramework.Plus;
@@ -20,6 +21,14 @@ namespace Web.Core.Infrastructures
             _dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
             _dbSet = _dbContext.Set<TEntity>();
         }
+        public IQueryable<TEntity> GetEntities()
+        {
+            if (typeof(ISoftDelete).IsAssignableFrom(typeof(TEntity)))
+            {
+                return _dbSet.Where(x => !((ISoftDelete)x).IsDeleted);
+            }
+            return _dbSet;
+        }
 
         public void ChangeTable(string table)
         {
@@ -31,7 +40,7 @@ namespace Web.Core.Infrastructures
 
         public async Task<TEntity> FirstOrDefaultAsync(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null)
         {
-            IQueryable<TEntity> query = _dbSet;
+            IQueryable<TEntity> query = GetEntities();
             if (include != null)
             {
                 query = include(query);
@@ -41,7 +50,7 @@ namespace Web.Core.Infrastructures
 
         public async Task<TEntity> FirstAsync(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null)
         {
-            IQueryable<TEntity> query = _dbSet;
+            IQueryable<TEntity> query = GetEntities();
             if (include != null)
             {
                 query = include(query);
@@ -53,16 +62,25 @@ namespace Web.Core.Infrastructures
 
         public async Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate = null)
         {
+            var query = GetEntities();
             if (predicate == null)
             {
-                return await _dbSet.CountAsync();
+                return await query.CountAsync();
             }
             else
             {
-                return await _dbSet.CountAsync(predicate);
+                return await query.CountAsync(predicate);
             }
         }
-
+        public async Task<int> CountAsync(string filter)
+        {
+            var query = GetEntities();
+            if (!string.IsNullOrEmpty(filter))
+            {
+                return query.Where(filter).Count();
+            }
+            return await query.CountAsync();
+        }
         public async Task<long> LongCountAsync(Expression<Func<TEntity, bool>> predicate = null)
         {
             if (predicate == null)
@@ -175,26 +193,49 @@ namespace Web.Core.Infrastructures
 
         public void RemoveRange(IList<TEntity> entities) => _dbSet.RemoveRange(entities);
 
-        public IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null, bool disableTracking = true)
+        public async Task<IQueryable<TEntity>> Query(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null, bool disableTracking = true)
         {
-            IQueryable<TEntity> query = _dbSet;
-
-            if (disableTracking)
+            IQueryable<TEntity> query = GetEntities();
+            try
             {
-                query = query.AsNoTracking();
+                if (disableTracking)
+                {
+                    query = query.AsNoTracking();
+                }
+
+                if (include != null)
+                {
+                    query = include(query);
+                }
+
+                if (predicate != null)
+                {
+                    query = query.Where(predicate);
+                }
+
+                return query;
+            }
+            catch (Exception ex)
+            {
+                return new TEntity[] { }.AsQueryable();
+            }
+        }
+        public async Task<IQueryable<TEntity>> Query(string filter, string order, int pageIndex, int pageSize)
+        {
+            try
+            {
+                IQueryable<TEntity> query = GetEntities();
+                if (query.Any() && !string.IsNullOrEmpty(filter))
+                {
+                    return query.Where(filter).OrderBy(order).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+                }
+                return query.OrderBy(order).Skip((pageIndex - 1) * pageSize).Take(pageSize);
+            }
+            catch (Exception ex)
+            {
+                return new TEntity[] { }.AsQueryable();
             }
 
-            if (include != null)
-            {
-                query = include(query);
-            }
-
-            if (predicate != null)
-            {
-                query = query.Where(predicate);
-            }
-
-            return query;
         }
 
         public void ChangeEntityState(TEntity entity, EntityState state)
@@ -204,7 +245,7 @@ namespace Web.Core.Infrastructures
 
         public async Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null)
         {
-            IQueryable<TEntity> query = _dbSet;
+            IQueryable<TEntity> query = GetEntities();
             if (include != null)
             {
                 query = include(query);
@@ -214,7 +255,7 @@ namespace Web.Core.Infrastructures
 
         public async Task<TEntity> SingleAsync(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null)
         {
-            IQueryable<TEntity> query = _dbSet;
+            IQueryable<TEntity> query = GetEntities();
             if (include != null)
             {
                 query = include(query);

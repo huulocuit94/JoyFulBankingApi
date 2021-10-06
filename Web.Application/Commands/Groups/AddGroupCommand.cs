@@ -9,7 +9,7 @@ using Web.Core.Infrastructures;
 
 namespace Web.Application.Commands.Groups
 {
-    public class AddGroupCommand : BaseCommand, IRequest<ResponseDto<Entity>>
+    public class AddGroupCommand : BaseCommandDto, IRequest<ResponseDto<Entity>>
     {
         public string Name { get; set; }
     }

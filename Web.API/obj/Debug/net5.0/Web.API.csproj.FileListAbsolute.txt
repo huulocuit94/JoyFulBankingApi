@@ -253,3 +253,7 @@ D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\obj\Debug\net5.0\Web.
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\obj\Debug\net5.0\ref\Web.API.dll
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\obj\Debug\net5.0\Web.API.pdb
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\obj\Debug\net5.0\Web.API.genruntimeconfig.cache
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\bin\Debug\net5.0\Serilog.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.API\bin\Debug\net5.0\System.Linq.Dynamic.Core.dll
