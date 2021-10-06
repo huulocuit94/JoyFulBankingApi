@@ -11,7 +11,7 @@ using Web.Core.Infrastructures;
 
 namespace Web.Application.Commands
 {
-    public class AddCompaignCommand: BaseCommand, IRequest<ResponseDto<Entity>>
+    public class AddCompaignCommand: BaseCommandDto, IRequest<ResponseDto<Entity>>
     {
         public string Name { get; set; }
         public DateTimeOffset ExpiredDate { get; set; }

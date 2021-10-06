@@ -46,6 +46,7 @@ namespace Web.Application.Handlers.Compaigns
                 }
             }
             await unitOfWork.GetRepository<Compaign>().AddAsync(compaign);
+            await unitOfWork.SaveChangesAsync();
             return new ResponseDto<Entity> { Result = new Entity { Id = compaign.Id } };
         }
 

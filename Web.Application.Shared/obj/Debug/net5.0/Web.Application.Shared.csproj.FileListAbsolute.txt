@@ -33,3 +33,6 @@ D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\obj\De
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\obj\Debug\net5.0\Web.Application.Shared.dll
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\obj\Debug\net5.0\ref\Web.Application.Shared.dll
 D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\obj\Debug\net5.0\Web.Application.Shared.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\bin\Debug\net5.0\Web.Core.dll
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\bin\Debug\net5.0\Web.Core.pdb
+D:\Personal\JoyfullBanking\Source\JoyFulBankingApi\Web.Application.Shared\obj\Debug\net5.0\Web.Application.Shared.csproj.CopyComplete

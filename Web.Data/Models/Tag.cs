@@ -11,11 +11,9 @@ namespace Web.Data.Models
     {
         public Tag()
         {
-            Categories = new HashSet<Category>();
+            
         }
         public string Name { get; set; }
         public string Description { get; set; }
-        public virtual ICollection<Category> Categories { get; set; }
-
     }
 }

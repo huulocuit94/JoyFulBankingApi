@@ -13,7 +13,7 @@ namespace Web.Core.Dtos
             Errors = new List<ErrorDto>();
         }
         public T Result { get; set; }
-        public bool Success => Errors.Any();
+        public bool Success => !Errors.Any();
         public List<ErrorDto> Errors { get; set; }
     }
 }
