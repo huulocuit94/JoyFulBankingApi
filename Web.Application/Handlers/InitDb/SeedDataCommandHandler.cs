@@ -39,8 +39,7 @@ namespace Web.Application.Handlers.InitDb
                 var roles = new List<Role>
                 {
                     new Role {Name = Constants.RoleAdmin, Title = "Admin"},
-                    new Role {Name = Constants.RoleMember, Title = "Member"},
-                    new Role {Name = Constants.RoleGroupAdmin, Title = "Group Admin"},
+                    new Role {Name = Constants.RoleMember, Title = "Member"}
                 };
 
                 foreach (var t in roles)
@@ -61,11 +60,6 @@ namespace Web.Application.Handlers.InitDb
                 UserName = "admin",
                 FullName = "Admin"
             }, Constants.RoleAdmin);
-            dicUsers.Add(new User
-            {
-                UserName = "groupadmin",
-                FullName = "Group Admin"
-            }, Constants.RoleGroupAdmin);
             dicUsers.Add(new User
             {
                 UserName = "member",

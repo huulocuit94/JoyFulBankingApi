@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -13,8 +14,11 @@ namespace Web.Application.Commands.Users
 {
     public class AddUserCommand : IRequest<ResponseDto<Entity>>
     {
+        [Required]
         public string FullName { get; set; }
+        [Required]
         public string Password { get; set; }
+        [Required]
         public string PhoneNumber { get; set; }
         [JsonIgnore]
         [BindNever]
@@ -22,10 +26,10 @@ namespace Web.Application.Commands.Users
         public string CMND { get; set; }
         [JsonIgnore]
         [BindNever]
-        public string RoleName { get; set; }
+        public string RoleName { get; set; } = "Member";
         [JsonIgnore]
         [BindNever]
         public bool SendSetPasswordEmail { get; set; } = false;
-        public Guid GroupId { get; set; }
+        public Guid? GroupId { get; set; }
     }
 }

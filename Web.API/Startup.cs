@@ -42,9 +42,9 @@ namespace Web.API
             {
                 config.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
                 {
-                    Title = "Web API",
+                    Title = "JoyFun API",
                     Version = "v1",
-                    Description = "Web API"
+                    Description = "JoyFun API"
                 });
                 config.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
                 {
@@ -102,7 +102,7 @@ namespace Web.API
             });
             services.AddCors(options =>
             {
-                options.AddPolicy("LocNguyen", builder =>
+                options.AddPolicy("LN2L", builder =>
                 {
                     builder.AllowAnyOrigin()
                           .AllowAnyHeader()
@@ -127,7 +127,7 @@ namespace Web.API
             }
             app.UseHttpsRedirection();
             app.UseRouting();
-            app.UseCors("LocNguyen");
+            app.UseCors("LN2L");
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -135,7 +135,7 @@ namespace Web.API
             app.UseSwagger();
             app.UseSwaggerUI(config =>
             {
-                config.SwaggerEndpoint("/swagger/v1/swagger.json", "Web API");
+                config.SwaggerEndpoint("/swagger/v1/swagger.json", "JoyFun API");
             });
             app.UseEndpoints(endpoints =>
             {

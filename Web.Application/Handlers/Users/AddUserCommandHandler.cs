@@ -53,16 +53,21 @@ namespace Web.Application.Handlers.Users
                 {
                     response.Errors.Add(new ErrorDto { Code = Constants.UserError, Message = createClaim.Errors.First().Description });
                 }
-                var group = await unitOfWork.GetRepository<Group>().FirstOrDefaultAsync(x => x.Id == request.GroupId);
-                if (group != null)
+                if (request.GroupId.HasValue)
                 {
-                    await unitOfWork.GetRepository<GroupUserMapping>().AddAsync(new GroupUserMapping
+                    var group = await unitOfWork.GetRepository<Group>().FirstOrDefaultAsync(x => x.Id == request.GroupId);
+                    if (group != null)
                     {
-                        GroupId = request.GroupId,
-                        UserId = newUser.Id
-                    });
-                    await unitOfWork.SaveChangesAsync();
+                        await unitOfWork.GetRepository<GroupUserMapping>().AddAsync(new GroupUserMapping
+                        {
+                            GroupId = request.GroupId.Value,
+                            UserId = newUser.Id,
+                            CreatedByUserId = newUser.Id,
+                            ModifiedByUserId = newUser.Id
+                        });
+                    }
                 }
+                await unitOfWork.SaveChangesAsync();
                 response.Result = new Entity { Id = newUser.Id };
             }
             else

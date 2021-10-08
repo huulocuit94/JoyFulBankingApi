@@ -14,10 +14,11 @@ namespace Web.Data.Models
         {
         }
         public string Title { get; set; }
-        public string Link { get; set; }
-        public string SourceLink { get; set; }
+        public string Code { get; set; }
         public string Rules { get; set; }
+        public string SourceLink { get; set; }
         public string Description { get; set; }
+        public int Joys { get; set; }
         public DealStatus Status { get; set; }
         public Guid CompaignId { get; set; }
         public string FileData { get; set; }

@@ -27,23 +27,32 @@ namespace Web.Application.Handlers.Groups
                 CreatedByUserId = request.CurrentUserId,
                 ModifiedByUserId = request.CurrentUserId
             };
-            var isAvailableGroup = await unitOfWork.GetRepository<Group>().AnyAsync(x => x.Name.Equals(request.Name, StringComparison.CurrentCultureIgnoreCase));
-            if (!isAvailableGroup)
+            var existUserGroupMapping = await unitOfWork.GetRepository<GroupUserMapping>().AnyAsync(x => x.UserId == request.CurrentUserId);
+            if (!existUserGroupMapping)
             {
-                return new ResponseDto<Entity> { Errors = new List<ErrorDto> { new ErrorDto { Code = 4004, Message = "InValid" } } };
+                var isAvailableGroup = await unitOfWork.GetRepository<Group>().AnyAsync(x => x.Name.Equals(request.Name));
+                if (isAvailableGroup)
+                {
+                    return new ResponseDto<Entity> { Errors = new List<ErrorDto> { new ErrorDto { Code = 4004, Message = "Exist Group" } } };
+                }
+                else
+                {
+                    await unitOfWork.GetRepository<Group>().AddAsync(newGroup);
+                    await unitOfWork.GetRepository<GroupUserMapping>().AddAsync(new GroupUserMapping
+                    {
+                        GroupId = newGroup.Id,
+                        UserId = request.CurrentUserId,
+                        IsOwner = true,
+                        CreatedByUserId = request.CurrentUserId,
+                        ModifiedByUserId = request.CurrentUserId
+                    });
+                    await unitOfWork.SaveChangesAsync();
+                }
             }
             else
             {
-                await unitOfWork.GetRepository<Group>().AddAsync(newGroup);
-                await unitOfWork.GetRepository<GroupUserMapping>().AddAsync(new GroupUserMapping
-                {
-                    GroupId = newGroup.Id,
-                    UserId = request.CurrentUserId,
-                    IsOwner = true
-                });
-                await unitOfWork.SaveChangesAsync();
+                return new ResponseDto<Entity> { Errors = new List<ErrorDto> { new ErrorDto { Code = 4004, Message = "Exist Group" } } };
             }
-
             return new ResponseDto<Entity> { Result = new Entity { Id = newGroup.Id } };
         }
     }

@@ -12,8 +12,7 @@ namespace Web.Application.Shared.Dtos.Deals
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public string Link { get; set; }
-        public string SourceLink { get; set; }
+        public string Code { get; set; }
         public string Rules { get; set; }
         public string Description { get; set; }
         public string FileData { get; set; }

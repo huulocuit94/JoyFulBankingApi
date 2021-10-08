@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Web.Application.Commands.Groups
 {
     public class AddGroupCommand : BaseCommandDto, IRequest<ResponseDto<Entity>>
     {
+        [Required]
         public string Name { get; set; }
     }
 }

@@ -27,6 +27,7 @@ namespace Web.Data.Models.IdentityUser
         public string CMND { get; set; }
         public Rank Rank { get; set; }
         public string Avatar { get; set; }
+        public bool IsAdmin { get; set; }
         public virtual ICollection<UserClaim> Claims { get; set; }
         public virtual ICollection<UserToken> Tokens { get; set; }
         public virtual ICollection<UserRole> Roles { get; set; }

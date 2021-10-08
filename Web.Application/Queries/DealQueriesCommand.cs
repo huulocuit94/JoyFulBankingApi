@@ -12,6 +12,6 @@ namespace Web.Application.Queries
 {
     public class DealQueriesCommand : BasePagedListCommandDto, IRequest<ResponseDto<IPagedList<DealDto>>>
     {
-
+       
     }
 }

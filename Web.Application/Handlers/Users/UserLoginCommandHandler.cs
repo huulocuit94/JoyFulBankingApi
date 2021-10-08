@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,9 @@ using Web.Application.Helpers.Users;
 using Web.Application.Shared;
 using Web.Application.Shared.Dtos.Users;
 using Web.Core.Dtos;
+using Web.Core.Infrastructures;
 using Web.Core.ServiceExtentions;
+using Web.Data.Models;
 using Web.Data.Models.IdentityUser;
 
 namespace Web.Application.Handlers.Users
@@ -23,11 +26,13 @@ namespace Web.Application.Handlers.Users
         private readonly UserManager<User> userManager;
         private readonly SignInManager<User> signInManager;
         private readonly IConfiguration configuration;
-        public UserLoginCommandHandler(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration)
+        private readonly IUnitOfWork unitOfWork;
+        public UserLoginCommandHandler(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration, IUnitOfWork unitOfWork)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.configuration = configuration;
+            this.unitOfWork = unitOfWork;
         }
         public async Task<ResponseDto<TokenDto>> Handle(UserLoginCommand request, CancellationToken cancellationToken)
         {
@@ -51,11 +56,23 @@ namespace Web.Application.Handlers.Users
         private async Task<UserInfoDto> GetUserInfo(User user)
         {
             var roleNames = await userManager.GetRolesAsync(user);
+            var currentGroup = await unitOfWork.GetRepository<GroupUserMapping>().FirstOrDefaultAsync(x => x.UserId == user.Id, include: source=> source.Include(y=>y.Group));
             var result = new UserInfoDto
             {
                 FullName = user.FullName,
-                Role = roleNames.FirstOrDefault()
+                Role = roleNames.FirstOrDefault(),
+                Rank = user.Rank,
+                TotalJoys = user.TotalJoys,
+                CurrentJoys = user.CurrentJoys,
+                CMND = user.CMND,
+                Avatar = user.Avatar
             };
+            if(currentGroup!= null)
+            {
+                result.GroupName = currentGroup.Group.Name;
+                result.GroupId = currentGroup.Group.Id;
+                result.IsOwner = currentGroup.IsOwner;
+            }
             return result;
         }
         private async Task<TokenDto> CreateJwtToken(User user)

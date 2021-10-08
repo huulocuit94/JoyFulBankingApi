@@ -23,7 +23,7 @@
         IQueryable<TEntity> FromSql(string sql, params object[] parameters);
 
         Task<IQueryable<TEntity>> Query(Expression<Func<TEntity, bool>> predicate = null, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null, bool disableTracking = true);
-        Task<IQueryable<TEntity>> Query(string filter, string order, int pageIndex, int pageSize);
+        Task<IQueryable<TEntity>> Query(string filter, string order, int pageIndex, int pageSize, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null);
 
         Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate = null);
         Task<int> CountAsync(string filter);

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web.Application.Commands.Groups;
+using Web.Application.Queries;
 
 namespace Web.API.Controllers
 {
@@ -20,6 +21,20 @@ namespace Web.API.Controllers
         }
         [HttpPost("AddGroup")]
         public async Task<IActionResult> AddGroup(AddGroupCommand command)
+        {
+            command.CurrentUserId = base.CurrentUserId;
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpPost("PickCompaign")]
+        public async Task<IActionResult> PickCompaign(PickCompaignCommand command)
+        {
+            command.CurrentUserId = base.CurrentUserId;
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpPost("QueryGroups")]
+        public async Task<IActionResult> QueryGroups(GroupQueriesCommand command)
         {
             command.CurrentUserId = base.CurrentUserId;
             var result = await mediator.Send(command);

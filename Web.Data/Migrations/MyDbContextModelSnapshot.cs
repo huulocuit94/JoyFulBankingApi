@@ -34,6 +34,9 @@ namespace Web.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<DateTimeOffset>("ModifiedDate")
+                        .HasColumnType("datetimeoffset");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -77,6 +80,9 @@ namespace Web.Data.Migrations
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<long>("YoysAchievement")
+                        .HasColumnType("bigint");
 
                     b.HasKey("Id");
 
@@ -179,6 +185,9 @@ namespace Web.Data.Migrations
                     b.Property<Guid>("CategoryId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<Guid>("CompaignId")
                         .HasColumnType("uniqueidentifier");
 
@@ -197,8 +206,8 @@ namespace Web.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Link")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Joys")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("ModifiedByUserId")
                         .HasColumnType("uniqueidentifier");
@@ -237,9 +246,6 @@ namespace Web.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<double>("Amount")
-                        .HasColumnType("float");
-
                     b.Property<Guid>("CreatedByUserId")
                         .HasColumnType("uniqueidentifier");
 
@@ -247,6 +253,9 @@ namespace Web.Data.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<Guid>("DealId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("FromGroupId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
@@ -258,14 +267,11 @@ namespace Web.Data.Migrations
                     b.Property<DateTimeOffset>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<long>("Score")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
                     b.Property<Guid?>("TransactionId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("UserDealStatus")
+                        .HasColumnType("int");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -276,11 +282,85 @@ namespace Web.Data.Migrations
 
                     b.HasIndex("DealId");
 
+                    b.HasIndex("FromGroupId");
+
                     b.HasIndex("ModifiedByUserId");
 
                     b.HasIndex("UserId");
 
                     b.ToTable("DealUserMappings");
+                });
+
+            modelBuilder.Entity("Web.Data.Models.Gift", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTimeOffset>("ExpiredDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("FileData")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Joys")
+                        .HasColumnType("int");
+
+                    b.Property<DateTimeOffset>("ModifiedDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Gifts");
+                });
+
+            modelBuilder.Entity("Web.Data.Models.GiftUserMapping", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedByUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTimeOffset>("CreatedDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<Guid>("GiftId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("ModifiedByUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTimeOffset>("ModifiedDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedByUserId");
+
+                    b.HasIndex("GiftId");
+
+                    b.HasIndex("ModifiedByUserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("GiftUserMappings");
                 });
 
             modelBuilder.Entity("Web.Data.Models.Group", b =>
@@ -457,6 +537,9 @@ namespace Web.Data.Migrations
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsAdmin")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -592,6 +675,49 @@ namespace Web.Data.Migrations
                     b.ToTable("UserTokens");
                 });
 
+            modelBuilder.Entity("Web.Data.Models.SharedDealTracking", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedByUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTimeOffset>("CreatedDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<Guid>("DealId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("GroupId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LinkToSharing")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("ModifiedByUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTimeOffset>("ModifiedDate")
+                        .HasColumnType("datetimeoffset");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedByUserId");
+
+                    b.HasIndex("DealId");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("ModifiedByUserId");
+
+                    b.ToTable("SharedDealTrackings");
+                });
+
             modelBuilder.Entity("Web.Data.Models.Tag", b =>
                 {
                     b.Property<Guid>("Id")
@@ -645,6 +771,9 @@ namespace Web.Data.Migrations
                     b.Property<DateTimeOffset>("CreatedDate")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<Guid>("GiftId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -663,6 +792,8 @@ namespace Web.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CreatedByUserId");
+
+                    b.HasIndex("GiftId");
 
                     b.HasIndex("ModifiedByUserId");
 
@@ -847,6 +978,10 @@ namespace Web.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Web.Data.Models.Group", "Group")
+                        .WithMany()
+                        .HasForeignKey("FromGroupId");
+
                     b.HasOne("Web.Data.Models.IdentityUser.User", "ModifiedByUser")
                         .WithMany()
                         .HasForeignKey("ModifiedByUserId")
@@ -862,6 +997,43 @@ namespace Web.Data.Migrations
                     b.Navigation("CreatedByUser");
 
                     b.Navigation("Deal");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("ModifiedByUser");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Web.Data.Models.GiftUserMapping", b =>
+                {
+                    b.HasOne("Web.Data.Models.IdentityUser.User", "CreatedByUser")
+                        .WithMany()
+                        .HasForeignKey("CreatedByUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.Gift", "Gift")
+                        .WithMany()
+                        .HasForeignKey("GiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.IdentityUser.User", "ModifiedByUser")
+                        .WithMany()
+                        .HasForeignKey("ModifiedByUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.IdentityUser.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CreatedByUser");
+
+                    b.Navigation("Gift");
 
                     b.Navigation("ModifiedByUser");
 
@@ -989,6 +1161,39 @@ namespace Web.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Web.Data.Models.SharedDealTracking", b =>
+                {
+                    b.HasOne("Web.Data.Models.IdentityUser.User", "CreatedByUser")
+                        .WithMany()
+                        .HasForeignKey("CreatedByUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.Deal", "Deal")
+                        .WithMany()
+                        .HasForeignKey("DealId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Web.Data.Models.Group", "Group")
+                        .WithMany()
+                        .HasForeignKey("GroupId");
+
+                    b.HasOne("Web.Data.Models.IdentityUser.User", "ModifiedByUser")
+                        .WithMany()
+                        .HasForeignKey("ModifiedByUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CreatedByUser");
+
+                    b.Navigation("Deal");
+
+                    b.Navigation("Group");
+
+                    b.Navigation("ModifiedByUser");
+                });
+
             modelBuilder.Entity("Web.Data.Models.Tag", b =>
                 {
                     b.HasOne("Web.Data.Models.Category", null)
@@ -1020,6 +1225,12 @@ namespace Web.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Web.Data.Models.Gift", "Gift")
+                        .WithMany()
+                        .HasForeignKey("GiftId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Web.Data.Models.IdentityUser.User", "ModifiedByUser")
                         .WithMany()
                         .HasForeignKey("ModifiedByUserId")
@@ -1033,6 +1244,8 @@ namespace Web.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("CreatedByUser");
+
+                    b.Navigation("Gift");
 
                     b.Navigation("ModifiedByUser");
 

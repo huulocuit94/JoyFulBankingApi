@@ -16,7 +16,7 @@ namespace Web.Data.Models
         public string Name { get; set; }
         public string Icon { get; set; }
         public string Description { get; set; }
-
+        public DateTimeOffset ModifiedDate { get; set; }
         public virtual ICollection<Tag> Tags { get; set; }
     }
 }

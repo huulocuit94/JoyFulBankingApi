@@ -27,9 +27,12 @@ namespace Web.Data
         public DbSet<Tag> Tags { get; set; }
         public DbSet<TransferJoy> TransferJoys { get; set; }
         public DbSet<TransferScore> TransferScores { get; set; }
+        public DbSet<SharedDealTracking> SharedDealTrackings { get; set; }
+        public DbSet<Gift> Gifts { get; set; }
+        public DbSet<GiftUserMapping> GiftUserMappings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
-        {  
+        {
             base.OnModelCreating(builder);
             builder.Entity<Role>().ToTable("Roles");
             builder.Entity<RoleClaim>().ToTable("RoleClaims");
@@ -68,7 +71,6 @@ namespace Web.Data
                .WithOne(x => x.User)
                .HasForeignKey(x => x.UserId)
                .IsRequired();
-
             });
             modelBuilder.Entity<Role>(b =>
             {

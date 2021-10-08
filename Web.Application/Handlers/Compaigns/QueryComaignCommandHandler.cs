@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,23 @@ namespace Web.Application.Handlers.Compaigns
             {
                 var items = await unitOfWork.GetRepository<Compaign>().Query(request.Filter, request.Order, request.PageIndex, request.PageSize);
                 var count = await unitOfWork.GetRepository<Compaign>().CountAsync(request.Filter);
+
+                var itemMappings = mapper.Map<IList<CompaignDto>>(items);
+                if (itemMappings.Any())
+                {
+                    var currentGroup = await unitOfWork.GetRepository<GroupUserMapping>().FirstOrDefaultAsync(x => x.UserId == request.CurrentUserId);
+                    if (currentGroup != null)
+                    {
+                        var allUsedDeals = await unitOfWork.GetRepository<DealUserMapping>().Query(x => x.FromGroupId == currentGroup.GroupId && x.UserDealStatus == Shared.Enums.UserDealStatus.Used, include: source => source.Include(y => y.Deal.Compaign));
+                        foreach (var item in itemMappings)
+                        {
+                            item.Percent = GetPercent(item, allUsedDeals);
+                        }
+                    }
+                }
                 var res = new PagedList<CompaignDto>
                 {
-                    Items = mapper.Map<IList<CompaignDto>>(items),
+                    Items = itemMappings,
                     TotalCount = count
                 };
                 response.Result = res;
@@ -44,6 +59,15 @@ namespace Web.Application.Handlers.Compaigns
                 return response;
             }
             return response;
+        }
+        private decimal GetPercent(CompaignDto compaign, IEnumerable<DealUserMapping> usedDeals)
+        {
+            if (usedDeals.Any(x => x.Deal.CompaignId == compaign.Id))
+            {
+                var totalJoyOfGroupByCompaigns = usedDeals.Where(x => x.Deal.CompaignId == compaign.Id).Sum(y => y.Deal.Joys);
+                return Math.Round((decimal)totalJoyOfGroupByCompaigns / compaign.YoysAchievement, 0);
+            }
+            return 0;
         }
     }
 }

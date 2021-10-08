@@ -13,8 +13,11 @@ namespace Web.Data.Models
     {
         [ForeignKey("User")]
         public Guid UserId { get; set; }
+        public Guid GiftId { get; set; }
         public long TranferedJoys { get; set; } = 0;
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
+        [ForeignKey("GiftId")]
+        public virtual Gift Gift { get; set; }
     }
 }

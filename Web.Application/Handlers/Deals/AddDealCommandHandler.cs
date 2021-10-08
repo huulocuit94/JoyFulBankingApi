@@ -28,6 +28,7 @@ namespace Web.Application.Handlers.Deals
                 Title = request.Title,
                 Status = Shared.Enums.DealStatus.Open,
                 Rules = request.Rules,
+                Code = request.Code,
                 Description = request.Description,
                 CompaignId = request.CompaignId,
                 CreatedByUserId = request.CurrentUserId,

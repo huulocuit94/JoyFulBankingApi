@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Web.Application.Commands.Users;
+using Web.Application.Queries;
 
 namespace Web.API.Controllers
 {
@@ -27,8 +28,23 @@ namespace Web.API.Controllers
             return Ok(result);
         }
         [HttpPost("Register")]
+        [AllowAnonymous]
         public async Task<IActionResult> AddUser(AddUserCommand command)
         {
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpPost("ViewHistoryJoy")]
+        public async Task<IActionResult> HistoryJoy(HistoryJoyCommand command)
+        {
+            command.CurrentUserId = base.CurrentUserId;
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpPost("GetMyGifts")]
+        public async Task<IActionResult> GetMyGifts(MyGiftQueriesCommand command)
+        {
+            command.CurrentUserId = base.CurrentUserId;
             var result = await mediator.Send(command);
             return Ok(result);
         }

@@ -220,11 +220,15 @@ namespace Web.Core.Infrastructures
                 return new TEntity[] { }.AsQueryable();
             }
         }
-        public async Task<IQueryable<TEntity>> Query(string filter, string order, int pageIndex, int pageSize)
+        public async Task<IQueryable<TEntity>> Query(string filter, string order, int pageIndex, int pageSize, Func<IQueryable<TEntity>, IIncludableQueryable<TEntity, object>> include = null)
         {
             try
             {
                 IQueryable<TEntity> query = GetEntities();
+                if (include != null)
+                {
+                    query = include(query);
+                }
                 if (query.Any() && !string.IsNullOrEmpty(filter))
                 {
                     return query.Where(filter).OrderBy(order).Skip((pageIndex - 1) * pageSize).Take(pageSize);

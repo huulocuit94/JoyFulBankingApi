@@ -25,4 +25,8 @@
     <ProjectReference Include="..\Web.Application\Web.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Attachments\" />
+  </ItemGroup>
+
 </Project>

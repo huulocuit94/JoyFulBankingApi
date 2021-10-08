@@ -22,6 +22,7 @@ namespace Web.Data.Models
         public CompaignStatus Status { get; set; }
         public string Description { get; set; }
         public string FileData { get; set; }
+        public long YoysAchievement { get; set; }
         public virtual ICollection<Deal> Deals { get; set; }
         public virtual ICollection<CompaignUserMapping> CompaignUserMappings { get; set; }
     }
