@@ -72,5 +72,11 @@ namespace Web.API.Controllers
             var result = await mediator.Send(command);
             return Ok(result);
         }
+        [HttpPost("DeleteDeal")]
+        public async Task<IActionResult> DeleteDeal(DeleteDealCommand command)
+        {
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
     }
 }

@@ -20,7 +20,8 @@ namespace Web.API.Controllers
         }
         [HttpPost("QueryRankUsers")]
         public async Task<IActionResult> AddGroup(RankUserQueriesCommand command)
-        {  
+        {
+            command.CurrentUserId = base.CurrentUserId;
             var result = await mediator.Send(command);
             return Ok(result);
         }

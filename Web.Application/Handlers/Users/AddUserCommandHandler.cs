@@ -38,7 +38,8 @@ namespace Web.Application.Handlers.Users
             {
                 UserName = request.PhoneNumber,
                 Email = request.Email,
-                FullName = request.FullName
+                FullName = request.FullName,
+                Rank = Shared.Enums.Rank.JoyWarm
             };
             var createdUser = await userManager.CreateAsync(newUser, request.Password);
             if (createdUser.Succeeded)

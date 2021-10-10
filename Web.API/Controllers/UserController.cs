@@ -48,5 +48,21 @@ namespace Web.API.Controllers
             var result = await mediator.Send(command);
             return Ok(result);
         }
+        [HttpPost("GetUsers")]
+        public async Task<IActionResult> GetUsers(UserQueriesCommand command)
+        {
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
+        [HttpGet("GetUserProfile")]
+        public async Task<IActionResult> GetUserProfile()
+        {
+            var command = new UserInfoCommand
+            {
+                CurrentUserId = base.CurrentUserId
+            };
+            var result = await mediator.Send(command);
+            return Ok(result);
+        }
     }
 }

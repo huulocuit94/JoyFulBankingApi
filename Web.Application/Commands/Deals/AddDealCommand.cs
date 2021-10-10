@@ -15,7 +15,6 @@ namespace Web.Application.Commands.Deals
     public class AddDealCommand : BaseCommandDto, IRequest<ResponseDto<Entity>>
     {
         public string Title { get; set; }
-        [Required]
         public string Code { get; set; }
         [Required]
         public int Joys { get; set; }

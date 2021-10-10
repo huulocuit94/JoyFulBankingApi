@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,13 @@ namespace Web.Application.Handlers.Deals
         }
         public async Task<ResponseDto<bool>> Handle(CompleteDealCommand request, CancellationToken cancellationToken)
         {
+            try
+            {
+
+            }catch(Exception ex)
+            {
+                Log.Error(ex.Message);
+            }
             var currentDeal = await unitOfWork.GetRepository<Deal>().FirstOrDefaultAsync(x => x.Code == request.Code, include: source => source.Include(y => y.Compaign));
             if (currentDeal != null)
             {

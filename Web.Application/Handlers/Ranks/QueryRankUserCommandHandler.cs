@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ using Web.Application.Queries;
 using Web.Application.Shared.Dtos.Ranks;
 using Web.Core.Dtos;
 using Web.Core.Infrastructures;
+using Web.Data.Models;
 using Web.Data.Models.IdentityUser;
 
 namespace Web.Application.Handlers.Ranks
@@ -29,22 +31,26 @@ namespace Web.Application.Handlers.Ranks
             var response = new ResponseDto<IPagedList<RankDto>>();
             try
             {
-                var allUsers = await unitOfWork.GetRepository<User>().Query(x=>!x.IsAdmin);
-                var rankUsers = new List<RankDto>();
-                foreach(var item in allUsers)
+                var curentGroup = await unitOfWork.GetRepository<GroupUserMapping>().FirstOrDefaultAsync(x => x.UserId == request.CurrentUserId);
+                if (curentGroup != null)
                 {
-                    rankUsers.Add(new RankDto
+                    var allUsers = await unitOfWork.GetRepository<User>().Query(x => !x.IsAdmin && x.GroupMappings.FirstOrDefault()!= null && x.GroupMappings.FirstOrDefault().GroupId == curentGroup.GroupId, include: source => source.Include(y => y.GroupMappings));
+                    var rankUsers = new List<RankDto>();
+                    foreach (var item in allUsers)
                     {
-                        Name = item.FullName,
-                        Joys = item.TotalJoys
-                    });
+                        rankUsers.Add(new RankDto
+                        {
+                            Name = item.FullName,
+                            Joys = item.TotalJoys
+                        });
+                    }
+                    rankUsers = rankUsers.OrderByDescending(x => x.Joys).Take(request.Top).ToList();
+                    response.Result = new PagedList<RankDto>
+                    {
+                        Items = rankUsers,
+                        TotalCount = allUsers.Count()
+                    };
                 }
-                rankUsers = rankUsers.OrderByDescending(x => x.Joys).Take(request.Top).ToList();
-                response.Result = new PagedList<RankDto>
-                {
-                    Items = rankUsers,
-                    TotalCount = allUsers.Count()
-                };
             }
             catch (Exception ex)
             {

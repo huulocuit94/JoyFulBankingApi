@@ -44,9 +44,10 @@ namespace Web.Application.Handlers.Deals
                         ModifiedByUserId = request.CurrentUserId,
                         UserDealStatus = Shared.Enums.UserDealStatus.Received
                     };
-                    if (request.GroupId.HasValue && request.GroupId != Guid.Empty)
+                    var currentGroup = await unitOfWork.GetRepository<GroupUserMapping>().FirstOrDefaultAsync(x => x.UserId == request.CurrentUserId);
+                    if (currentGroup!= null)
                     {
-                        newPickDeal.FromGroupId = request.GroupId;
+                        newPickDeal.FromGroupId = currentGroup.GroupId;
                     }
                     await unitOfWork.GetRepository<DealUserMapping>().AddAsync(newPickDeal);
                     await unitOfWork.SaveChangesAsync();

@@ -38,13 +38,19 @@ namespace Web.Application.Handlers.Gifts
                             {
                                 GiftId = currentGift.Id,
                                 UserId = request.CurrentUserId,
-                                TranferedJoys = currentGift.Joys
+                                TranferedJoys = currentGift.Joys,
+                                CreatedByUserId = request.CurrentUserId,
+                                ModifiedByUserId = request.CurrentUserId
                             };
                             await unitOfWork.GetRepository<TransferJoy>().AddAsync(transferUserGift);
                             currentUser.CurrentJoys -= currentGift.Joys;
                             unitOfWork.GetRepository<User>().Update(currentUser);
                             await unitOfWork.SaveChangesAsync();
                             result.Result = true;
+                        }
+                        else
+                        {
+                            return new ResponseDto<bool> { Errors = new List<ErrorDto> { new ErrorDto { Code = 4014, Message = "Not enough Joy" } } };
                         }
                     }
                 }

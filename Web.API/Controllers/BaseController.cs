@@ -22,5 +22,6 @@ namespace Web.API.Controllers
                 return Guid.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
             }
         }
+       
     }
 }
